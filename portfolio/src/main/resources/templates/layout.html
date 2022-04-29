@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+    <title>Document</title>
+</head>
+<body>
+<!-- layout.html을 상속한 템플릿(html)에서 개별적으로 구현해야 하는 영역.-->    
+
+<nav th:replace="navbar :: navbarFragment"></nav>
+
+<th:block layout:fragment="content"></th:block>
+
+<script th:src="@{/bootstrap.min.js}"></script>
+
+<th:block layout:fragment="script"></th:block>
+
+</body>
+</html>
